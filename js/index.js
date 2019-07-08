@@ -28,3 +28,17 @@ document.querySelector('.back').addEventListener('click', backPressed);
 function backPressed() {
   display.value = display.value.substring(0, display.value.length-1);
 }
+
+document.querySelector('.sqrt').addEventListener('click', sqrt);
+
+function sqrt() {
+   let sqrtDisplay = Math.sqrt(display.value);
+   sqrtDisplay.value = sqrtDisplay;
+   display.value = sqrtDisplay;
+}
+
+function dotOperation() {
+    if (display.value.indexOf('.') === -1) {
+        display.value += '.';
+    }
+}
